@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Websanova Color Picker</title>
+	
+	<script type="text/javascript" src="./inc/jquery.1.7.1.min.js"></script>
+	
+	<link rel="Stylesheet" type="text/css" href="./wColorPicker.css" />
+	<script type="text/javascript" src="./wColorPicker.js"></script>
+	
+	<style>
+		.hoverBox{
+			float:left;
+			margin: 10px;
+			padding: 10px;
+			border: solid #CACACA 1px;
+		}
+	</style>
+	
+</head>
+<body>
+	
+	<div id="wColorPicker1" class="hoverBox">
+		<input id="wColorPicker_input1" type="text"/><br/><br/>
+	</div>
+	<div id="wColorPicker2" class="hoverBox"></div>
+	<div id="wColorPicker3" class="hoverBox"></div>
+	<div id="wColorPicker4" class="hoverBox"></div>
+	<div id="wColorPicker5" class="hoverBox"></div>
+	<div id="wColorPicker6" class="hoverBox"></div>
+	<div id="wColorPicker7" class="hoverBox"></div>
+	<div id="wColorPicker8" class="hoverBox"></div>
+	<div id="wColorPicker9" class="hoverBox"></div>
+	
+	<script type="text/javascript">
+		$("#wColorPicker1").wColorPicker({
+			initColor: '#FF00FF',
+			onSelect: function(color){
+				$("#wColorPicker_input1").css('background', color).val(color);
+			},
+			onMouseover: function(color){
+				$("#wColorPicker_input1").css('background', color).val(color);
+			},
+			onMouseout: function(color){
+				$("#wColorPicker_input1").css('background', color).val(color);
+			}
+		});
+		
+		$("#wColorPicker2").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'hover', effect: 'none', color: 'white'});
+		
+		$("#wColorPicker3").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'hover', effect: 'fade', color: 'cream'});
+		
+		$("#wColorPicker4").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'hover', effect: 'slide', color: 'red'});
+		
+		$("#wColorPicker5").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'hover', effect: 'slide', color: 'green'});
+		
+		$("#wColorPicker6").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'click', effect: 'none', color: 'blue', title: 'this is a title'});
+		
+		$("#wColorPicker7").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'click', effect: 'fade', color: 'yellow'});
+		
+		$("#wColorPicker8").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'click', effect: 'slide', color: 'orange'});
+		
+		$("#wColorPicker9").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'click', effect: 'slide', color: 'plum'});
+	</script>
+	
+</body>
+</html>
