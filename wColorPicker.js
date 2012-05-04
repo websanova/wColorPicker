@@ -13,24 +13,41 @@
  ******************************************/
 (function($)
 {	
-	$.fn.wColorPicker = function(settings)
+	var methods = {
+        	init: function(settings)
+	        {
+	            	settings = $.extend({}, $.fn.wColorPicker.defaultSettings, settings || {});
+	
+	            	return this.each(function()
+	            	{
+	                	var elem = $(this),
+	                    		$settings = jQuery.extend(true, {}, settings),
+	                    		cp = new ColorPicker($settings);
+	
+	                	elem.data('cp', cp);
+	                	cp.generate();
+	                	cp.appendToElement(elem);
+	                	cp.colorSelect(cp, $settings.initColor);
+	            	});
+        	},
+	        colorSelect : function(color)
+	        {
+	            	var cp = $(this).data('cp');
+	            	cp.colorSelect(cp, color);
+	        }
+    	};
+
+	$.fn.wColorPicker = function(method)
 	{
-		settings = $.extend({}, $.fn.wColorPicker.defaultSettings, settings || {});
-		
-		return this.each(function()
-		{
-			var elem = $(this);	
-			var $settings = jQuery.extend(true, {}, settings);
-			
-			var cp = new ColorPicker($settings);
-
-			cp.generate();
-
-			cp.appendToElement(elem);			
-		
-			cp.colorSelect(cp, $settings.initColor);
-		});
+		if ( methods[method] ) {
+			return methods[method].apply( this, Array.prototype.slice.call( arguments, 1 ));
+		} else if ( typeof method === 'object' || ! method ) {
+		  	return methods.init.apply( this, arguments );
+		} else {
+		  	$.error( 'Method ' +  method + ' does not exist on jQuery.tooltip' );
+		}
 	};
+
 
 	$.fn.wColorPicker.defaultSettings = {
 		color			: 'black', 		// colors - black, white, cream, red, green, blue, yellow, orange, plum
