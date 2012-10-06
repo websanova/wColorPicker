@@ -8,7 +8,7 @@
  * @license         This websanova color picker jQuery plug-in is dual licensed under the MIT and GPL licenses.
  * @link            http://www.websanova.com
  * @docs            http://www.websanova.com/plugins/websanova/color-picker
- * @version         Version 1.2.4
+ * @version         Version 1.2.5
  *
  ******************************************/
 (function($)
@@ -49,7 +49,7 @@
 			var elem = $(this);	
 			var $settings = jQuery.extend(true, {}, settings);
 			
-			var cp = new ColorPicker($settings);
+			var cp = new ColorPicker($settings, elem);
 
 			cp.generate();
 
@@ -78,10 +78,11 @@
 	/**
 	 * ColorPicker class definition
 	 */
-	function ColorPicker(settings)
+	function ColorPicker(settings, elem)
 	{ 
 		this.colorPicker = null;
 		this.settings = settings;
+		this.$elem = elem;
 		this.currentColor = settings.initColor;
 		
 		this.height = null;					// init this, need to get height/width proper while element is still showing
@@ -217,7 +218,7 @@
 			$this.currentColor = color;
 			$this.customInput.val(color);
 			
-			if($this.settings.onSelect) $this.settings.onSelect(color);
+			if($this.settings.onSelect) $this.settings.onSelect.apply(this, [color]);
 			
 			if($this.buttonColor)
 			{
@@ -237,7 +238,7 @@
 			$this.customTarget.css('backgroundColor', color);
 			$this.customInput.val(color);
 			
-			if($this.settings.onMouseover) $this.settings.onMouseover(color);
+			if($this.settings.onMouseover) $this.settings.onMouseover.apply(this, [color]);
 		},
 		
 		colorHoverOff: function($this, $element)
@@ -248,7 +249,7 @@
 			$this.customTarget.css('backgroundColor', $this.currentColor);
 			$this.customInput.val($this.currentColor);
 			
-			if($this.settings.onMouseout) $this.settings.onMouseout($this.currentColor);
+			if($this.settings.onMouseout) $this.settings.onMouseout.apply(this, [$this.currentColor]);
 		},
 		
 		appendToElement: function($element)
