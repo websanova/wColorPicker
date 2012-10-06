@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta charset="utf-8">
+	
 	<title>Websanova Color Picker</title>
 	
 	<script type="text/javascript" src="./inc/jquery.1.8.2.min.js"></script>
@@ -54,13 +56,17 @@
 		
 		$("#wColorPicker5").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'hover', effect: 'slide', theme: 'green'});
 		
-		$("#wColorPicker6").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'click', effect: 'none', theme: 'blue', title: 'this is a title'});
+		$("#wColorPicker6").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'click', effect: 'none', theme: 'blue'});
 		
 		$("#wColorPicker7").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'click', effect: 'fade', theme: 'yellow'});
 		
 		$("#wColorPicker8").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'click', effect: 'slide', theme: 'orange'});
 		
 		$("#wColorPicker9").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'click', effect: 'slide', theme: 'plum'});
+	</script>
+
+	<script type="text/javascript">
+		console.log($('.hoverBox').wColorPicker('mode'));
 	</script>
 	
 </body>

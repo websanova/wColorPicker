@@ -8,12 +8,12 @@
  * @license         This websanova color picker jQuery plug-in is dual licensed under the MIT and GPL licenses.
  * @link            http://www.websanova.com
  * @docs            http://www.websanova.com/plugins/websanova/color-picker
- * @version         Version 1.2.3
+ * @version         Version 1.2.4
  *
  ******************************************/
 (function($)
 {	
-	$.fn.wColorPicker = function(settings)
+	$.fn.wColorPicker = function(option, settings)
 	{
 		if(typeof option === 'object')
 		{
@@ -56,6 +56,8 @@
 			cp.appendToElement(elem);			
 		
 			cp.colorSelect(cp, $settings.initColor);
+
+			elem.data('_wColorPicker', cp);
 		});
 	};
 
