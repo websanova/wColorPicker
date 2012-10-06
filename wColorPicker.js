@@ -8,7 +8,7 @@
  * @license         This websanova color picker jQuery plug-in is dual licensed under the MIT and GPL licenses.
  * @link            http://www.websanova.com
  * @docs            http://www.websanova.com/plugins/websanova/color-picker
- * @version         Version 1.2.2
+ * @version         Version 1.2.3
  *
  ******************************************/
 (function($)
@@ -60,7 +60,7 @@
 	};
 
 	$.fn.wColorPicker.defaultSettings = {
-		color			: 'black', 		// colors - black, white, cream, red, green, blue, yellow, orange, plum
+		theme			: 'black', 		// colors - black, white, cream, red, green, blue, yellow, orange, plum
 		opacity			: 0.8,			// opacity level
 		initColor		: '#FF0000',	// initial colour to set palette to
 		onMouseover		: null,			// function to run when palette color is moused over
@@ -176,7 +176,7 @@
 					.append( content )
 				)
 			)
-			.addClass('_wColorPicker_' + this.settings.color)
+			.addClass('_wColorPicker_' + this.settings.theme)
 			
 			return this.colorPicker;
 		},
