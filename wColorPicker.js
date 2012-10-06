@@ -5,10 +5,10 @@
  *
  * @author          Websanova
  * @copyright       Copyright (c) 2012 Websanova.
- * @license         This websanova color picker jQuery plug-in is dual licensed under the MIT and GPL licenses.
+ * @license         This wChar jQuery plug-in is dual licensed under the MIT and GPL licenses.
  * @link            http://www.websanova.com
- * @docs            http://www.websanova.com/plugins/websanova/color-picker
- * @version         Version 1.2.5
+ * @github			http://github.com/websanova/wColorPicker
+ * @version         Version 1.3.0
  *
  ******************************************/
 (function($)
