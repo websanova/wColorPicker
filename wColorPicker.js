@@ -8,7 +8,7 @@
  * @license         This wChar jQuery plug-in is dual licensed under the MIT and GPL licenses.
  * @link            http://www.websanova.com
  * @github			http://github.com/websanova/wColorPicker
- * @version         Version 1.3.0
+ * @version         Version 1.3.1
  *
  ******************************************/
 (function($)
@@ -272,8 +272,8 @@
 
 				$element.append(buttonHolder);
 				
-				$this.width = $this.colorPicker.outerWidth();
-				$this.height = $this.colorPicker.outerHeight();
+				$this.width = $this.colorPicker.outerWidth(true);
+				$this.height = $this.colorPicker.outerHeight(true);
 				$this.paletteHolder.css({width: $this.width, height: $this.height}).hide();
 				
 				if($this.settings.effect == 'fade') $this.paletteHolder.css({opacity: 0});
@@ -308,10 +308,10 @@
 			
 			//init some vars
 			var left = 0;
-			var top = $this.paletteHolder.parent().outerHeight();
+			var top = $this.paletteHolder.parent().outerHeight(true);
 			$this.slideTopToBottom = top;
 			
-			if(offset.left - $(window).scrollLeft() + $this.width > $(window).width()) left = -1 * ($this.width - $this.paletteHolder.parent().outerWidth());
+			if(offset.left - $(window).scrollLeft() + $this.width > $(window).width()) left = -1 * ($this.width - $this.paletteHolder.parent().outerWidth(true));
 			if(offset.top - $(window).scrollTop() + $this.height > $(window).height())
 			{
 				$this.slideTopToBottom = 0;
