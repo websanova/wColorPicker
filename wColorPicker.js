@@ -15,6 +15,33 @@
 {	
 	$.fn.wColorPicker = function(settings)
 	{
+		if(typeof option === 'object')
+		{
+			settings = option;
+		}
+		else if(typeof option === 'string')
+		{
+			var values = [];
+
+			var elements = this.each(function()
+			{
+				var data = $(this).data('_wColorPicker');
+
+				if(data)
+				{
+					if($.fn.wColorPicker.defaultSettings[option] !== undefined)
+					{
+						if(settings !== undefined) { data.settings[option] = settings; }
+						else { values.push(data.settings[option]); }
+					}
+				}
+			});
+
+			if(values.length === 1) { return values[0]; }
+			if(values.length > 0) { return values; }
+			else { return elements; }
+		}
+
 		settings = $.extend({}, $.fn.wColorPicker.defaultSettings, settings || {});
 		
 		return this.each(function()
