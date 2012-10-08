@@ -8,7 +8,7 @@ A jQuery color picker plugin. [Check out the live demo](http://www.websanova.com
 Available options with notes, the values here are the defaults.
 
 ```javascript
-$('input, textarea').wColorPicker({
+$('#elem').wColorPicker({
     theme         : 'black',    // colors - black, white, cream, red, green, blue, yellow, orange, plum
     opacity       : 0.8,        // opacity level
     initColor     : '#FF0000',  // initial colour to set palette to
