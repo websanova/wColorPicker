@@ -1,0 +1,39 @@
+{
+  "name": "wColorPicker",
+  "title": "wColorPicker jQuery Plugin",
+  "description": "A jQuery color picker plugin",
+  "keywords": [
+    "websanova",
+    "wColorPicker",
+    "color",
+    "colour",
+    "picker",
+    "palette"
+  ],
+  "version": "v1.3.3",
+  "author": {
+    "name": "Websanova",
+    "email": "rob@websanova.com",
+    "url": "http://websanova.com"
+  },
+  "maintainers": [
+    {
+      "name": "Websanova",
+      "email": "rob@websanova.com",
+      "url": "http://websanova.com"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/websanova/wColorPicker#license"
+    }
+  ],
+  "bugs": "https://github.com/websanova/wColorPicker/issues",
+  "homepage": "http://websanova.com/plugins/color-picker",
+  "docs": "https://github.com/websanova/wColorPicker#wcolorpickerjs",
+  "download": "https://github.com/websanova/wColorPicker/tags",
+  "dependencies": {
+    "jquery": ">=1.5"
+  }
+}
