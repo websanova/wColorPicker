@@ -8,7 +8,7 @@
  * @license         This wChar jQuery plug-in is dual licensed under the MIT and GPL licenses.
  * @link            http://www.websanova.com
  * @github			http://github.com/websanova/wColorPicker
- * @version         Version 1.3.3
+ * @version         Version 1.3.4
  *
  ******************************************/
 (function($)

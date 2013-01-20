@@ -1,7 +1,7 @@
 {
   "name": "wColorPicker",
   "title": "wColorPicker jQuery Plugin",
-  "description": "A jQuery color picker plugin",
+  "description": "A jQuery color picker plugin by Websanova",
   "keywords": [
     "websanova",
     "wColorPicker",
@@ -10,7 +10,7 @@
     "picker",
     "palette"
   ],
-  "version": "v1.3.3",
+  "version": "1.3.4",
   "author": {
     "name": "Websanova",
     "email": "rob@websanova.com",
