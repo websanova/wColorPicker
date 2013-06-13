@@ -1,7 +1,7 @@
 {
   "name": "wColorPicker",
   "title": "wColorPicker jQuery Plugin",
-  "description": "A jQuery color picker plugin by Websanova",
+  "description": "A jQuery color picker plugin with various effects for showing and hiding the color picker.  Also comes with an option to set a clickable button to trigger effects.",
   "keywords": [
     "websanova",
     "wColorPicker",

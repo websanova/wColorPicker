@@ -1,73 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-
-	<title>Websanova Color Picker</title>
-	
-	<script type="text/javascript" src="./inc/jquery.1.8.2.min.js"></script>
-	
-	<link rel="Stylesheet" type="text/css" href="./wColorPicker.css" />
-	<script type="text/javascript" src="./wColorPicker.js"></script>
-	
-	<style>
-		.hoverBox{
-			float:left;
-			margin: 10px;
-			padding: 10px;
-			border: solid #CACACA 1px;
-		}
-	</style>
-	
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="keywords" content="jquery, plugin, color, picker, colorpicker, colors" />
+    <meta name="description" content="A jQuery color picker plugin with various effects for showing and hiding the color picker.  Also comes with an option to set a clickable button to trigger effects." />
+    <meta name = "owner" content = "Websanova" />
+    <link rel="icon" type="image/vnd.microsoft.icon"  href="./assets/img/favicon.ico" />
+    <title>Websanova :: wColorPicker</title>
+    
+    <script type="text/javascript" src="./assets/jquery.1.9.1.min.js"></script>
+    <link rel="Stylesheet" type="text/css" href="./assets/demo.css" />
 </head>
 <body>
-	
-	<div id="wColorPicker1" class="hoverBox">
-		<input id="wColorPicker_input1" type="text"/><br/><br/>
-	</div>
-	<div id="wColorPicker2" class="hoverBox"></div>
-	<div id="wColorPicker3" class="hoverBox"></div>
-	<div id="wColorPicker4" class="hoverBox"></div>
-	<div id="wColorPicker5" class="hoverBox"></div>
-	<div id="wColorPicker6" class="hoverBox"></div>
-	<div id="wColorPicker7" class="hoverBox"></div>
-	<div id="wColorPicker8" class="hoverBox"></div>
-	<div id="wColorPicker9" class="hoverBox"></div>
-	
-	<script type="text/javascript">
-		$("#wColorPicker1").wColorPicker({
-			initColor: '#FF00FF',
-			onSelect: function(color){
-				$("#wColorPicker_input1").css('background', color).val(color);
-			},
-			onMouseover: function(color){
-				$("#wColorPicker_input1").css('background', color).val(color);
-			},
-			onMouseout: function(color){
-				$("#wColorPicker_input1").css('background', color).val(color);
-			}
-		});
-		
-		$("#wColorPicker2").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'hover', effect: 'none', theme: 'white'});
-		
-		$("#wColorPicker3").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'hover', effect: 'fade', theme: 'cream'});
-		
-		$("#wColorPicker4").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'hover', effect: 'slide', theme: 'red'});
-		
-		$("#wColorPicker5").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'hover', effect: 'slide', theme: 'green'});
-		
-		$("#wColorPicker6").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'click', effect: 'none', theme: 'blue'});
-		
-		$("#wColorPicker7").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'click', effect: 'fade', theme: 'yellow'});
-		
-		$("#wColorPicker8").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'click', effect: 'slide', theme: 'orange'});
-		
-		$("#wColorPicker9").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'click', effect: 'slide', theme: 'plum'});
-	</script>
+    <header>
+        <a id="header-logo" href="http://websanova.com" target="_blank"></a>
 
-	<script type="text/javascript">
-		console.log($('.hoverBox').wColorPicker('mode'));
-	</script>
-	
+        <div id="header-links">
+            <a href="http://websanova.com">Home</a>
+            <a href="http://websanova.com/plugins">Plugins</a>
+            <a href="http://websanova.com/extensions">Extensions</a>
+        </div>
+    </header>   
+
+    <div id="content">
+        <h1 id="plugin-name">wColorPicker.js</h1>
+
+        <div id="addthis-toolbox" class="addthis_toolbox addthis_default_style">
+            <a id="github-button" href="https://github.com/websanova/wColorPicker" target="_blank" title="GitHub"></a>
+            <a class="addthis_button_facebook" addthis:url="http://wcolorpicker.websanova.com" addthis:title="Websanova wColorPicker Demo"></a>
+            <a class="addthis_button_twitter" addthis:url="http://wcolorpicker.websanova.com" addthis:title="Websanova wColorPicker Demo"></a>
+            <a class="addthis_button_google_plusone_share" addthis:url="http://wcolorpicker.websanova.com" addthis:title="Websanova wColorPicker Demo"></a>
+            <a class="addthis_button_reddit" addthis:url="http://wcolorpicker.websanova.com" addthis:title="Websanova wColorPicker Demo"></a>
+            <a class="addthis_button_dzone" addthis:url="http://wcolorpicker.websanova.com" addthis:title="Websanova wColorPicker Demo"></a>
+            <a class="addthis_button_compact" addthis:url="http://wcolorpicker.websanova.com" addthis:title="Websanova wColorPicker Demo"></a>
+        </div>
+
+        <h2>About</h2>
+
+        <div class="content-box">
+            A jQuery color picker plugin with various effects for showing and hiding the color picker.  Also comes with an option to set a clickable button to trigger effects.
+        </div>
+
+        <ul>
+            <li><a href="https://github.com/websanova/wColorPicker/tags">Download</a></li>
+            <li><a href="https://github.com/websanova/wColorPicker#wcolorpickerjs">Documentation</a></li>
+        </ul>
+
+        <h2>Related Plugins</h2>
+
+        <ul>
+            <li><a href="http://wpaint.websanova.com">wPaint</a> - Simple paint drawing plugin.</li>
+            <li><a href="http://wscratchpad.websanova.com">wScratchPad</a> - Plugin simulating scratch card.</li>
+            <li><a href="http://whumanmsg.websanova.com">wHumanMsg</a> - A modern alerting plugin.</li>
+            <li><a href="http://wtooltip.websanova.com">wTooltip</a> - Simple sleek looking tooltips.</li>
+        </ul>
+
+        <h2>Demo</h2>
+
+        <div class="content-box">
+            <div id="wColorPicker1" >
+                <input id="wColorPicker_input1" type="text"/><br/>
+            </div>
+
+            <div id="wColorPicker2" class="hoverBox"></div>
+            <div id="wColorPicker3" class="hoverBox"></div>
+            <div id="wColorPicker4" class="hoverBox"></div>
+            <div id="wColorPicker5" class="hoverBox"></div>
+            <div id="wColorPicker6" class="hoverBox"></div>
+            <div id="wColorPicker7" class="hoverBox"></div>
+            <div id="wColorPicker8" class="hoverBox"></div>
+            <div id="wColorPicker9" class="hoverBox"></div>
+            <div style="clear:both;"></div>
+        </div>
+
+        <script type="text/javascript" src="./wColorPicker.js"></script>
+        <link rel="Stylesheet" type="text/css" href="./wColorPicker.css" />
+
+        <script type="text/javascript">
+            $("#wColorPicker1").wColorPicker({
+                initColor: '#FF00FF',
+                onSelect: function(color){
+                    $("#wColorPicker_input1").css('background', color).val(color);
+                },
+                onMouseover: function(color){
+                    $("#wColorPicker_input1").css('background', color).val(color);
+                },
+                onMouseout: function(color){
+                    $("#wColorPicker_input1").css('background', color).val(color);
+                }
+            });
+            
+            $("#wColorPicker2").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'hover', effect: 'none', theme: 'white'});
+            $("#wColorPicker3").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'hover', effect: 'fade', theme: 'cream'});
+            $("#wColorPicker4").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'hover', effect: 'slide', theme: 'red'});
+            $("#wColorPicker5").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'hover', effect: 'slide', theme: 'green'});
+            $("#wColorPicker6").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'click', effect: 'none', theme: 'blue'});
+            $("#wColorPicker7").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'click', effect: 'fade', theme: 'yellow'});
+            $("#wColorPicker8").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'click', effect: 'slide', theme: 'orange'});
+            $("#wColorPicker9").wColorPicker({onSelect:function(color){/*do something*/}, mode: 'click', effect: 'slide', theme: 'plum'});
+
+            console.log($('.hoverBox').wColorPicker('mode'));
+        </script>
+
+        <style>
+            .hoverBox{
+                float:left;
+                margin: 10px;
+                padding: 10px;
+                border: solid #CACACA 1px;
+            }
+        </style>
+
+        <h2>Resources</h2>
+
+        <ul>
+            <li><a href="http://websanova.com/plugins">More jQuery plugins by Websanova</a></li>
+            <li><a href="http://www.websanova.com/tutorials/jquery/the-ultimate-guide-to-writing-jquery-plugins">The Ultimate Guide to Writing jQuery Plugins</a></li>
+            <li><a href="http://www.websanova.com/tutorials/jquery/jquery-plugin-development-boilerplate">jQuery Plugin Development Boilerplate</a></li>
+        </ul>
+    </div>
+
+    <footer>
+        <div id="footer-icons">
+            <!--a id="youtube-icon" href="http://websanova.com/youtube" target="_blank"></a-->
+            <a id="stumbleupon-icon" href="http://websanova.com/stumbleupon" target="_blank"></a>
+            <a id="linkedin-icon" href="http://websanova.com/linkedin" target="_blank"></a>
+            <a id="facebook-icon" href="http://websanova.com/facebook" target="_blank"></a>
+            <a id="googleplus-icon" href="http://websanova.com/googleplus" target="_blank"></a>
+            <a id="twitter-icon" href="http://websanova.com/twitter" target="_blank"></a>
+            <a id="github-icon" href="http://websanova.com/github" target="_blank"></a>
+            <a id="rss-icon" href="http://websanova.com/feed" target="_blank"></a>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        if(window.location.protocol === 'file:') $('#addthis-toolbox').hide();
+    </script>
+
+    <!-- AddThis Button BEGIN -->
+    <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+    <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-504fdeb9241970a8"></script>
+    <!-- AddThis Button END -->
+
+    <!-- google analytics -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-12380236-11']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
 </body>
 </html>

@@ -1,6 +1,15 @@
-# wChar.js
+# wColorPicker.js
 
-A jQuery color picker plugin. [Check out the live demo](http://www.websanova.com/plugins/color-pickers/jquery).
+A jQuery color picker plugin with various effects for showing and hiding the color picker.  Also comes with an option to set a clickable button to trigger effects.
+
+* [View the wInput demo](http://wcolorpicker.websanova.com)
+* [Download the lastest version of wInput](https://github.com/websanova/wColorPicker/tags)
+
+
+## Related Plugins
+
+* [wPaint](http://wpaint.websanova.com) - Simple paint drawing plugin.
+* [wScratchPad](http://wscratchpad.websanova.com) - Plugin simulating scratch card.
 
 
 ## Settings
@@ -23,40 +32,25 @@ $('#elem').wColorPicker({
 });
 ```
 
-Update settings on the fly:
-
-```javascript
-$('input').wColorPicker('mode', 'hover');
-```
-
-Retrieve settings, if more than one it will return an array otherwise just the value.
-
-```javascript
-console.log($('#elem').wColorPicker('mode'));           // 'hover'
-console.log($('.hoverBox').wColorPicker('mode'));       // ['hover', 'flat', 'click']
-```
-
 
 ## Examples
 
+For starters you will need to include the following files:
 
-Init color picker with some settings:
-
-```html
-<div id="wColorPicker" class="hoverBox"></div>
-
-<script type="text/javascript">
-    $("#wColorPicker").wColorPicker({mode: 'click', effect: 'slide', theme: 'plum'});
-</script>
+```js
+<script type="text/javascript" src="./wColorPicker.js"></script>
+<link rel="Stylesheet" type="text/css" href="./wColorPicker.css" />
 ```
 
-Init color picker and set callbacks:
+### callbacks
+
+You can set callbacks for the color picker for each color in the palette.
 
 ```html
 <div id="wColorPicker" class="hoverBox">
     <input id="wColorPicker_input" type="text"/><br/><br/>
 </div>
-    
+
 <script type="text/javascript">
     $("#wColorPicker").wColorPicker({
         initColor: '#FF00FF',
@@ -73,8 +67,10 @@ Init color picker and set callbacks:
 </script>
 ```
 
+
 ## Resources
 
+* [More jQuery plugins by Websanova](http://websanova.com/plugins)
 * [jQuery Plugin Development Boilerplate](http://www.websanova.com/tutorials/jquery/jquery-plugin-development-boilerplate)
 * [The Ultimate Guide to Writing jQuery Plugins](http://www.websanova.com/tutorials/jquery/the-ultimate-guide-to-writing-jquery-plugins)
 
