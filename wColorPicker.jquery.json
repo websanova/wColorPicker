@@ -10,7 +10,7 @@
     "picker",
     "palette"
   ],
-  "version": "1.3.4",
+  "version": "1.3.5",
   "author": {
     "name": "Websanova",
     "email": "rob@websanova.com",
@@ -30,7 +30,7 @@
     }
   ],
   "bugs": "https://github.com/websanova/wColorPicker/issues",
-  "homepage": "http://websanova.com/plugins/color-picker",
+  "homepage": "http://wcolorpicker.websanova.com",
   "docs": "https://github.com/websanova/wColorPicker#wcolorpickerjs",
   "download": "https://github.com/websanova/wColorPicker/tags",
   "dependencies": {

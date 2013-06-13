@@ -2,8 +2,8 @@
 
 A jQuery color picker plugin with various effects for showing and hiding the color picker.  Also comes with an option to set a clickable button to trigger effects.
 
-* [View the wInput demo](http://wcolorpicker.websanova.com)
-* [Download the lastest version of wInput](https://github.com/websanova/wColorPicker/tags)
+* [View the wColorPicker demo](http://wcolorpicker.websanova.com)
+* [Download the lastest version of wColorPicker](https://github.com/websanova/wColorPicker/tags)
 
 
 ## Related Plugins
