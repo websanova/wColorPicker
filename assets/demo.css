@@ -60,12 +60,12 @@ header {
     right: 10px;
 }
 #header-links a {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: bold;
     font-family: Verdana;
     color: #FAFAFA;
     text-transform: uppercase;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 #header-links a:hover {
     color: #636363;
@@ -153,7 +153,7 @@ footer {
 /*** ads ***/
 #adsblock {
     position: relative;
-    width: 728px;
+    overflow: hidden;
     height: 90px;
 }
 
@@ -168,5 +168,9 @@ footer {
     }
     #footer-icons {
         right: 50px;
+    }
+    #header-links a {
+        font-size: 10px;
+        margin-left: 20px;
     }
 }
