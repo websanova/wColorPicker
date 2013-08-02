@@ -95,7 +95,7 @@ header {
 #content {
     position: relative;
     background: #FEFEFE;
-    max-width: 700px;
+    max-width: 728px;
     padding: 20px;
     margin: 30px auto;
 }
@@ -152,7 +152,9 @@ footer {
 
 /*** ads ***/
 #adsblock {
-    display: none;
+    position: relative;
+    width: 728px;
+    height: 90px;
 }
 
 /*** media ***/
@@ -166,10 +168,5 @@ footer {
     }
     #footer-icons {
         right: 50px;
-    }
-    #adsblock {
-        position: relative;
-        display: block;
-
     }
 }
