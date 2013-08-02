@@ -1,0 +1,25 @@
+{
+  "name": "wColorPicker",
+  "title": "wColorPicker jQuery Color Picker Plugin",
+  "version": "2.0.0",
+  "description": "A jQuery color picker plugin with various effects for showing and hiding the color picker.  Also comes with an option to set a clickable button to trigger effects.",
+  "main": "wColorPicker.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/websanova/wColorPicker"
+  },
+  "author": {
+    "name": "Websanova",
+    "email": "rob@websanova.com",
+    "url": "http://websanova.com"
+  },
+  "homepage" : "http://wchar.websanova.com",
+  "license": "MIT, GPL",
+  "dependencies": {
+    "grunt-contrib-concat": "",
+    "grunt-contrib-uglify": "",
+    "grunt-contrib-jshint": "",
+    "grunt-contrib-stylus": "",
+    "grunt-contrib-watch": ""
+  }
+}
