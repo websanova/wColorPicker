@@ -170,9 +170,6 @@ footer {
     #adsblock {
         position: relative;
         display: block;
-        width: 120px;
-        height: 600px;
-        float: right;
-        margin-left: 20px;
+
     }
 }
