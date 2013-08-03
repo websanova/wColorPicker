@@ -128,7 +128,7 @@ header {
 #addthis-toolbox {
     position: absolute;
     right: 15px;
-    top: 44px;
+    top: 40px;
 }
 #content {
     position: relative;
@@ -222,6 +222,9 @@ footer {
     }
     #plugin-name {
         font-size: 30px;
+    }
+    #addthis-toolbox {
+        top: 44px;
     }
 }
 
