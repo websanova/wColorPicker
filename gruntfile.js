@@ -36,7 +36,7 @@ module.exports = function(grunt) {
     stylus: {
       compile: {
         options: {
-          import: ['nib', './mixins'],
+          import: ['nib', '../assets/mixins'],
         },
         files: {
           './wColorPicker.min.css': './src/wColorPicker.css'
