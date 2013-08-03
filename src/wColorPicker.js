@@ -188,20 +188,7 @@
     },
 
     /************************************
-     * Events
-     ************************************/
-
-    _customInputKeyup: function(e) {
-        var val = $(e.target).val();
-        
-        if (window.rgbHex(val)) {
-          this.$colorTarget.css('backgroundColor', val);
-          if (e.keyCode === 13) { this.setColor(val); }
-        }
-    },
-
-    /************************************
-     * Private
+     * Components
      ************************************/
 
     _createPalette: function(name, colors) {
@@ -232,8 +219,8 @@
         .addClass('wColorPicker-palette-color-' + index)
         .css('backgroundColor', color)
         .hover(
-          function(){ _this._colorHoverOn($(this)); },
-          function(){ _this._colorHoverOff($(this)); }
+          function(){ _this._colorMouseenter($(this)); },
+          function(){ _this._colorMouseleave($(this)); }
         )
         .click(function(e) {
           e.stopPropagation();
@@ -241,7 +228,20 @@
         });
     },
 
-    _colorHoverOn: function($el) {
+    /************************************
+     * Events
+     ************************************/
+
+    _customInputKeyup: function(e) {
+        var val = $(e.target).val();
+        
+        if (window.rgbHex(val)) {
+          this.$colorTarget.css('backgroundColor', val);
+          if (e.keyCode === 13) { this.setColor(val); }
+        }
+    },
+
+    _colorMouseenter: function($el) {
       var color = window.rgbHex($el.css('backgroundColor'));
 
       $el.addClass('active').prev().addClass('active-right');
@@ -253,7 +253,7 @@
       if (this.options.onMouseover) { this.options.onMouseover.apply(this, [color]); }
     },
     
-    _colorHoverOff: function($el) {
+    _colorMouseleave: function($el) {
       $el.removeClass('active').prev().removeClass('active-right');
       $el.prevAll('.' + $el.attr('id') + ':first').removeClass('active-bottom');
       
@@ -262,6 +262,10 @@
       
       if (this.options.onMouseout) { this.options.onMouseout.apply(this, [this.currentColor]); }
     },
+
+    /************************************
+     * Effects
+     ************************************/
 
     _toggleEffect: function(toggle) {
       var visible = this.$colorPicker.hasClass('wColorPicker-visible');
@@ -276,10 +280,6 @@
         this.$colorPicker.toggleClass('wColorPicker-visible');
       }
     },
-
-    /************************************
-     * Effects
-     ************************************/
 
     /* none */
     _noneEffectShow: function() {
