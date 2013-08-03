@@ -22,7 +22,7 @@
     <!-- fileend -->
 </head>
 <body>
-  <!-- headstart -->
+    <!-- headstart -->
     <header>
         <a id="header-logo" href="http://websanova.com"></a>
 
@@ -32,7 +32,12 @@
             <a href="http://websanova.com/extensions">Extensions</a>
             <a href="http://websanova.com/services">Services</a>
         </div>
+        
+        <div id="header-menu-button">Menu</div>
     </header>
+    <script type="text/javascript">
+        $("#header-menu-button").click(function(){ $("#header-links").toggle(); });
+    </script>
     <!-- headend -->
 
   <div id="content">
@@ -49,18 +54,17 @@
     </div>
 
     <!-- adsstart -->
-    <div id="adsblock">
-        <script type="text/javascript"><!--
-            google_ad_client = "ca-pub-3292441848617055";
-            /* Websanova Plugins Page Horizontal */
-            google_ad_slot = "3327382539";
-            google_ad_width = 728;
-            google_ad_height = 90;
-            //-->
-        </script>
-        <script type="text/javascript"
-            src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-        </script>
+    <div class="adsblock adsblock-mobile-banner">
+        <script type="text/javascript">google_ad_client = "ca-pub-3292441848617055"; google_ad_slot = "1791773731"; google_ad_width = 320; google_ad_height = 50;</script>
+        <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+    </div>
+    <div class="adsblock adsblock-banner">
+        <script type="text/javascript">google_ad_client = "ca-pub-3292441848617055"; google_ad_slot = "9315040539"; google_ad_width = 468; google_ad_height = 60;</script>
+        <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+    </div>
+    <div class="adsblock adsblock-leaderboard">
+        <script type="text/javascript">google_ad_client = "ca-pub-3292441848617055"; google_ad_slot = "3327382539"; google_ad_width = 728; google_ad_height = 90;</script>
+        <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
     </div>
     <!-- adsend -->
 
@@ -75,9 +79,9 @@
       <li><a href="https://github.com/websanova/wColorPicker#wcolorpickerjs">Documentation</a></li>
     </ul>
 
-    <h2>Related Plugins</h2>
+    <h2>Related&nbsp;Plugins</h2>
 
-    <ul>
+    <ul class="no-margin-top">
       <li><a href="http://wpaint.websanova.com">wPaint</a> - Simple paint drawing plugin.</li>
       <li><a href="http://wscratchpad.websanova.com">wScratchPad</a> - Plugin simulating scratch card.</li>
       <li><a href="http://whumanmsg.websanova.com">wHumanMsg</a> - A modern alerting plugin.</li>
@@ -89,7 +93,7 @@
     <div class="content-box">
       
       <div id="wColorPicker1" style="" ></div>
-      Type color here: <input id="wColorPicker-input1" type="text"/>
+      Enter Color: <input id="wColorPicker-input1" type="text"/>
       <br/>
 
       <div id="wColorPicker2" class="hoverBox"></div>
@@ -100,17 +104,24 @@
       <div id="wColorPicker7" class="hoverBox"></div>
       <div id="wColorPicker8" class="hoverBox"></div>
       <div id="wColorPicker9" class="hoverBox"></div>
-      <div style="clear:both;"></div>
+      <div style="clear:both;font-size:0px;line-height:0px;"></div>
     </div>
 
     <link rel="Stylesheet" type="text/css" href="./wColorPicker.min.css" />
     <script type="text/javascript" src="./wColorPicker.min.js"></script>
 
     <style>
+      #wColorPicker-input1 {
+        width: 75px;
+        border: solid #CACACA 1px;
+        border-radius: 5px;
+        font-size: 10px;
+        padding: 4px 5px;
+      }
       .hoverBox{
         position: relative;
         float:left;
-        margin: 10px;
+        margin: 10px 10px 10px 0;
         width: 25px;
         height: 25px;
       }
@@ -152,13 +163,28 @@
     <h2>Resources</h2>
 
     <!-- resourcestart -->
-        <ul>
-            <li><a href="http://websanova.com/plugins">More jQuery plugins by Websanova</a></li>
-            <li><a href="http://websanova.com/extensions">Websanova JavaScript Extension Project</a></li>
-            <li><a href="http://wboiler.websanova.com">jQuery Plugin Development Boilerplate</a></li>
-            <li><a href="http://www.websanova.com/blog/jquery/the-ultimate-guide-to-writing-jquery-plugins">The Ultimate Guide to Writing jQuery Plugins</a></li>
-        </ul>
-        <!-- resourceend -->
+    <ul class="no-margin-top">
+        <li><a href="http://websanova.com/plugins">More jQuery plugins by Websanova</a></li>
+        <li><a href="http://websanova.com/extensions">Websanova JavaScript Extension Project</a></li>
+        <li><a href="http://wboiler.websanova.com">jQuery Plugin Development Boilerplate</a></li>
+        <li><a href="http://www.websanova.com/blog/jquery/the-ultimate-guide-to-writing-jquery-plugins">The Ultimate Guide to Writing jQuery Plugins</a></li>
+    </ul>
+    <!-- resourceend -->
+
+    <!-- ads2start -->
+    <div class="adsblock ads2block adsblock-mobile-banner">
+        <script type="text/javascript">google_ad_client = "ca-pub-3292441848617055"; google_ad_slot = "1791773731"; google_ad_width = 320; google_ad_height = 50;</script>
+        <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+    </div>
+    <div class="adsblock ads2block adsblock-banner">
+        <script type="text/javascript">google_ad_client = "ca-pub-3292441848617055"; google_ad_slot = "9315040539"; google_ad_width = 468; google_ad_height = 60;</script>
+        <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+    </div>
+    <div class="adsblock ads2block adsblock-leaderboard">
+        <script type="text/javascript">google_ad_client = "ca-pub-3292441848617055"; google_ad_slot = "3327382539"; google_ad_width = 728; google_ad_height = 90;</script>
+        <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+    </div>
+    <!-- ads2end -->
   </div>
 
   <!-- footstart -->
