@@ -56,7 +56,7 @@ You can set callbacks for the color picker for each color in the palette.
 
 ```js
 $("#wColorPicker").wColorPicker({
-    initColor: '#FF00FF',
+    color: '#FF00FF',
     onSelect: function(color){
         $("#wColorPicker_input").css('background', color).val(color);
     },
