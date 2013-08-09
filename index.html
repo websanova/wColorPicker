@@ -97,8 +97,9 @@
       <div style="clear:both;font-size:0px;line-height:0px;"></div>
     </div>
 
-    <link rel="Stylesheet" type="text/css" href="./wColorPicker.min.css" />
-    <script type="text/javascript" src="./wColorPicker.min.js"></script>
+    <link rel="Stylesheet" type="text/css" href="./src/wColorPicker.css" />
+    <script type="text/javascript" src="./src/rgbHex.min.js"></script>
+    <script type="text/javascript" src="./src/wColorPicker.js"></script>
 
     <style>
       #wColorPicker-input1 {
@@ -143,7 +144,16 @@
       });
 
       // test modes/effects
-      $("#wColorPicker2").wColorPicker({mode:'hover', effect:'none'});
+      $("#wColorPicker2").wColorPicker({
+        mode:'hover',
+        effect:'none',
+        dropperButton: true,
+        onDropper: function() {
+          console.log('dropper');
+        }
+      });
+
+
       $("#wColorPicker3").wColorPicker({theme:'black', mode:'hover', effect:'fade', position:'lt'});
       $("#wColorPicker4").wColorPicker({theme:'blue', mode:'hover', effect:'slide', position:'tl'});
       $("#wColorPicker5").wColorPicker({theme:'red', mode:'click', effect:'none', position:'rb'});

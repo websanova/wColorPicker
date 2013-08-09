@@ -20,12 +20,15 @@
         // input and target holders
         this.$colorTarget = $('<div class="wColorPicker-color-target"></div>');
         this.$customInput = $('<input type="text" class="wColorPicker-custom-input"/>').keyup($.proxy(this._customInputKeyup, this));
+        
+        if (this.options.dropperButton) { this.$dropperButton = this._createDropperButton(); }
 
         // the Palettes holder is to enforce size of color picker for effects so no weird bunching up happens when we change sizes
         this.$colorPickerPalettesHolder = $('<div class="wColorPicker-palettes-holder"></div>')
         .append(this.$noneColorPalette)
         .append(this.$colorTarget)
         .append(this.$customInput)
+        .append(this.$dropperButton)
         .append('<br/>')
         .append(this.$simpleColorPalette)
         .append(this.$mixedColorPalette);
@@ -228,6 +231,10 @@
         });
     },
 
+    _createDropperButton: function() {
+      return $('<div class="wColorPicker-dropper"></div>').click($.proxy(this.options.onDropper, this));
+    },
+
     /************************************
      * Events
      ************************************/
@@ -363,17 +370,19 @@
   
   $.fn.wColorPicker.defaults = {
     theme           : 'classic',  // set theme
-    opacity         : 0.8,        // opacity level
+    opacity         : 0.9,        // opacity level
     color           : '#FF0000',  // set init color
     mode            : 'flat',     // mode for palette (flat, hover, click)
     position        : 'bl',       // position of palette, (tl, tc, tr, rt, rm, rb, br, bc, bl, lb, lm, lt)
     generateButton  : true,       // if mode not flat generate button or not
+    dropperButton   : false,      // optional dropper button to use in other apps
     effect          : 'slide',    // only used when not in flat mode (none, slide, fade)
     showSpeed       : 500,        // show speed for effects
     hideSpeed       : 500,        // hide speed for effects
     onMouseover     : null,       // callback for color mouseover
     onMouseout      : null,       // callback for color mouseout
-    onSelect        : null        // callback for color when selected
+    onSelect        : null,       // callback for color when selected
+    onDropper       : null        // callback when dropper is clicked
   };
 
   $.fn.wColorPicker.mixedColors = [

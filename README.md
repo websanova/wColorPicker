@@ -26,12 +26,14 @@ $('#elem').wColorPicker({
     mode            : 'flat',     // mode for palette (flat, hover, click)
     position        : 'bl',       // position of palette, (tl, tc, tr, rt, rm, rb, br, bc, bl, lb, lm, lt)
     generateButton  : true,       // if mode not flat generate button or not
+    dropperButton   : false,      // optional dropper button to use in other apps
     effect          : 'slide',    // only used when not in flat mode (none, slide, fade)
     showSpeed       : 500,        // show speed for effects
     hideSpeed       : 500,        // hide speed for effects
     onMouseover     : null,       // callback for color mouseover
     onMouseout      : null,       // callback for color mouseout
-    onSelect        : null        // callback for color when selected
+    onSelect        : null,       // callback for color when selected
+    onDropper       : null        // callback when dropper is clicked
 });
 ```
 
@@ -78,6 +80,18 @@ We also provide a `generateButton` option to use which will auto generate a butt
 Note that making your own button means there will be no target to display the color chosen once selected.  You would also need to manually setup an `onSelect` to update your selected color picker if you would like to show the color chosen within your button somewhere.
 
 Also make sure your button element does not have `overflow:hidden;` set otherwise you will not see the palettes.
+
+
+### dropper
+
+A dropper button is available for use with other apps.  This is a small button that will be set that when clicked will trigger a callback function that can be used to trigger some code in another app.  Both the `dropperButton` and `onDropper` options must be set.
+
+```js
+$("#wColorPicker").wColorPicker({
+    dropperButton: true,
+    onDropper: function(){ /* code */ }
+});
+```
 
 
 ## Grunt.js
