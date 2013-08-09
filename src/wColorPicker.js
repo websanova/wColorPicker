@@ -40,7 +40,12 @@
         this.$colorPickerBg = $('<div class="wColorPicker-bg"></div>');
 
         // put everything into the color picker
-        this.$colorPicker = $('<div class="wColorPicker"></div>').append(this.$colorPickerBg).append(this.$colorPickerHolder);
+        // make sure title="" here otherwise title from button will appear
+        // also bind some events to not propagate in case some kind of tooltip plugin is set
+        this.$colorPicker = $('<div class="wColorPicker" title=""></div>')
+        .mouseenter(function(e){ e.stopPropagation(); })
+        .bind('mouseenter mousemove click', function(e){ e.stopPropagation(); })
+        .append(this.$colorPickerBg).append(this.$colorPickerHolder);
 
         // set some properties
         this.setOpacity(this.options.opacity);
