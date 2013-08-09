@@ -89,7 +89,7 @@
     setColor: function(color) {
       if (!window.rgbHex(color)) { return true; }
 
-      this.currentColor = color;
+      this.options.color = color;
       this.$colorTarget.css('backgroundColor', color);
       this.$customInput.val(color);
 
@@ -268,10 +268,10 @@
       $el.removeClass('active').prev().removeClass('active-right');
       $el.prevAll('.' + $el.attr('id') + ':first').removeClass('active-bottom');
       
-      this.$colorTarget.css('backgroundColor', this.currentColor);
-      this.$customInput.val(this.currentColor);
+      this.$colorTarget.css('backgroundColor', this.options.color);
+      this.$customInput.val(this.options.color);
       
-      if (this.options.onMouseout) { this.options.onMouseout.apply(this, [this.currentColor]); }
+      if (this.options.onMouseout) { this.options.onMouseout.apply(this, [this.options.color]); }
     },
 
     /************************************
