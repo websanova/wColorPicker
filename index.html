@@ -93,6 +93,7 @@
       <div id="wColorPicker6" class="hoverBox"></div>
       <div id="wColorPicker7" class="hoverBox"></div>
       <div id="wColorPicker8" class="hoverBox"></div>
+      <input type="button" value="setColor" onclick="$('#wColorPicker8').wColorPicker('color', '#000');"/>
       <div style="clear:both;font-size:0px;line-height:0px;"></div>
     </div>
 
@@ -161,7 +162,7 @@
         generateButton:false,
         dropperButton: true,
         onSelect: function(color) {
-          console.log(color);
+          $("#wColorPicker8").css('backgroundColor', color);
         },
         onDropper: function() {
           console.log('dropper');

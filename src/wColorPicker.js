@@ -111,8 +111,13 @@
 
       // regenerate button
       if (mode !== 'flat') {
-        var tmpOnSelect = this.options.onSelect,
-            $button = null, $buttonColor = null;
+        var $button = null,
+            $buttonColor = null,
+            func = function(e) {
+              e.stopPropagation();
+              if(_this.options.generateButton) { $buttonColor.css('backgroundColor', _this.options.color); }
+              _this._toggleEffect();
+            };
 
         if(this.options.generateButton) {
           $button = $('<div class="wColorPicker-button"></div>');
@@ -122,11 +127,10 @@
           $button.append($buttonColor.height(this.$el.height() - $button.outerHeight(true)));
         }
 
-        this.options.onSelect = function(color) {
-          if(this.options.generateButton) { $buttonColor.css('backgroundColor', color); }
-          _this._toggleEffect();
-          if(tmpOnSelect) { tmpOnSelect.apply(_this, arguments); }
-        };
+        // toggle effect if palette is clicked
+        this.$noneColorPalette.bind('click', func);
+        this.$simpleColorPalette.bind('click', func);
+        this.$mixedColorPalette.bind('click', func);
       }
 
       // regenerate events
@@ -230,7 +234,6 @@
           function(){ _this._colorMouseleave($(this)); }
         )
         .click(function(e) {
-          e.stopPropagation();
           _this.setColor(window.rgbHex($(this).css('backgroundColor')));
         });
     },
