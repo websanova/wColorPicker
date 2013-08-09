@@ -110,16 +110,20 @@
       $(document).unbind('click', hideFunc);
 
       // regenerate button
-      if (mode !== 'flat' && this.options.generateButton) {
+      if (mode !== 'flat') {
         var tmpOnSelect = this.options.onSelect,
-            $button = $('<div class="wColorPicker-button"></div>'),
-            $buttonColor = $('<div class="wColorPicker-button-color"></div>').css('backgroundColor', this.options.color);
+            $button = null, $buttonColor = null;
 
-        this.$el.append($button);
-        $button.append($buttonColor.height(this.$el.height() - $button.outerHeight(true)));
+        if(this.options.generateButton) {
+          $button = $('<div class="wColorPicker-button"></div>');
+          $buttonColor = $('<div class="wColorPicker-button-color"></div>').css('backgroundColor', this.options.color);
+
+          this.$el.append($button);
+          $button.append($buttonColor.height(this.$el.height() - $button.outerHeight(true)));
+        }
 
         this.options.onSelect = function(color) {
-          $buttonColor.css('backgroundColor', color);
+          if(this.options.generateButton) { $buttonColor.css('backgroundColor', color); }
           _this._toggleEffect();
           if(tmpOnSelect) { tmpOnSelect.apply(_this, arguments); }
         };

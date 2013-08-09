@@ -93,7 +93,6 @@
       <div id="wColorPicker6" class="hoverBox"></div>
       <div id="wColorPicker7" class="hoverBox"></div>
       <div id="wColorPicker8" class="hoverBox"></div>
-      <div id="wColorPicker9" class="hoverBox"></div>
       <div style="clear:both;font-size:0px;line-height:0px;"></div>
     </div>
 
@@ -116,6 +115,12 @@
         margin: 10px 10px 10px 0;
         width: 25px;
         height: 25px;
+      }
+      #wColorPicker8 {
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        border: solid #CACACA 1px;
       }
     </style>
 
@@ -144,21 +149,24 @@
       });
 
       // test modes/effects
-      $("#wColorPicker2").wColorPicker({
-        mode:'hover',
-        effect:'none',
-        dropperButton: true,
-        onDropper: function() {
-          console.log('dropper');
-        }
-      });
-
-
+      $("#wColorPicker2").wColorPicker({mode:'hover', effect:'none'});
       $("#wColorPicker3").wColorPicker({theme:'black', mode:'hover', effect:'fade', position:'lt'});
       $("#wColorPicker4").wColorPicker({theme:'blue', mode:'hover', effect:'slide', position:'tl'});
       $("#wColorPicker5").wColorPicker({theme:'red', mode:'click', effect:'none', position:'rb'});
       $("#wColorPicker6").wColorPicker({theme:'green', mode:'click', effect:'fade', position:'rm'});
       $("#wColorPicker7").wColorPicker({theme:'orange', mode:'click', effect:'slide', position: 'rt'});
+
+      $("#wColorPicker8").wColorPicker({
+        mode:'click',
+        generateButton:false,
+        dropperButton: true,
+        onSelect: function(color) {
+          console.log(color);
+        },
+        onDropper: function() {
+          console.log('dropper');
+        }
+      });
     </script>
 
     <h2>Resources</h2>

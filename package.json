@@ -1,7 +1,7 @@
 {
   "name": "wColorPicker",
   "title": "wColorPicker jQuery Color Picker Plugin",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "A jQuery color picker plugin with various effects for showing and hiding the color picker.  Also comes with an option to set a clickable button to trigger effects.",
   "main": "wColorPicker.js",
   "repository": {
