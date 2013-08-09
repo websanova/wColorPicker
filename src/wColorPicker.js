@@ -287,6 +287,7 @@
         (toggle === 'show' && visible === false) ||
         (toggle === 'hide' && visible === true)
       ) {
+        if(!visible) { this.setPosition(this.options.position); }
         this['_' + this.options.effect + 'Effect' + (visible ? 'Hide' : 'Show')]();
         this.$colorPicker.toggleClass('wColorPicker-visible');
       }
