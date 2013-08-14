@@ -12,7 +12,7 @@
 .wColorPicker-custom-input{position:relative;display:inline-block;*display:inline;zoom:1;vertical-align:middle;width:70px;height:16px;line-height:16px;font-size:9px;font-family:verdana;padding:0 2px;border:solid 1px}
 .wColorPicker-color-target,.wColorPicker-custom-input{margin:10px 10px 10px 0}
 .wColorPicker-dropper{position:relative;display:inline-block;*display:inline;zoom:1;vertical-align:middle;width:16px;height:16px;border:solid 1px;cursor:pointer}
-.wColorPicker-button{position:relative;-webkit-border-radius:5px;border-radius:5px;border:solid #cacaca 1px;padding:1px}
+.wColorPicker-button{position:relative;-webkit-border-radius:5px;border-radius:5px;border:solid #cacaca 1px;padding:1px;cursor:pointer}
 .wColorPicker-button-color{position:relative;-webkit-border-radius:5px;border-radius:5px}
 .wColorPicker-holder{border:solid 1px}
 .wColorPicker-bg,.wColorPicker-holder{-webkit-border-radius:5px;border-radius:5px}

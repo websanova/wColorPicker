@@ -97,6 +97,7 @@
   border-radius: 5px;
   border: solid #CACACA 1px;
   padding: 1px;
+  cursor: pointer;
 }
 .wColorPicker-button-color {
   position: relative;
